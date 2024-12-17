@@ -34,6 +34,9 @@ case 4
     [MIN_way,way_new] = Floyd(ves);
     disp(MIN_way);
     disp(way_new);
+    [MIN_way,way_new] = FordBellman(ves);
+    disp(MIN_way);
+    disp(way_new);
 case 5
     [speed, XY,masshtab,time_work_akum,time_zarad] = data_input; 
     [mat_sme,ves,kvoXY] = weights(XY,masshtab,speed,time_work_akum, time_zarad); 
@@ -43,6 +46,7 @@ case 6
     [speed, XY,masshtab,time_work_akum,time_zarad] = data_input; 
     [mat_sme,ves,kvoXY] = weights(XY,masshtab,speed,time_work_akum, time_zarad); 
     % [D,S,way_new,P,MIN_way] = Dijkstra(kvoXY,ves);
-    [MIN_way,way_new] = Floyd(ves);
+    % [MIN_way,way_new] = Floyd(ves);
+    [MIN_way,way_new] = FordBellman(ves);
     grafic(kvoXY,XY,ves,way_new);
 end
